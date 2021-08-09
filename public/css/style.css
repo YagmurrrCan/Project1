@@ -1,0 +1,310 @@
+.header {
+    background:linear-gradient(135deg, #c23970, #ea7538);
+    background-color: #8e2a18;
+    padding-top: 10px;
+    padding-bottom:50px;
+    font-family:'Signika', sans-serif;
+}
+
+@media (min-width:768px) {
+    .header {
+        padding-bottom:120px;
+    }
+}
+
+.header .navbar {
+    background:transparent;
+    padding-top:10.75rem;
+    padding-bottom:10.75rem;
+    color:#fff;
+    border-radius:0;
+    box-shadow:none;
+    border:none;
+}
+
+@media (min-width:768px) {
+    .header .navbar {
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+}
+
+.header .navbar .navbar-brand {
+    font-weight:bold;
+    color:inherit;
+}
+
+.header .navbar .navbar-brand:hover {
+    color:#f0f0f0;
+}
+
+.header .navbar .navbar-collapse {
+    border-top:1px solid rgba(255, 255, 255, 0.16);
+    margin-top:.5rem;
+}
+
+@media (min-width:768px) {
+    .header .navbar .navbar-collapse {
+        border-color:transparent;
+        margin:0;
+    }
+}
+
+.header .navbar .navbar-collapse span .sepet {
+    color:#d9d9d9;
+    margin-right:.5rem;
+    text-decoration:none;
+}
+
+.header .navbar .navbar-collapse span .sepet:hover {
+    color:#fff;
+}
+
+.header .navbar .navbar-toggler {
+    border-color:rgba(255,255,255,0.3);
+}
+
+.header .navbar .navbar-toggler:hover, .header .navbar-toggler:focus {
+    background:none;
+}
+
+.header .navbar .navbar-nav a.active, .header .navbar .navbar-nav > .show .dropdown-item {
+    background:none;
+    box-shadow:none;
+}
+
+@media (min-width: 768px) {
+    .header .navbar-nav .nav-link {
+        padding-left:.7rem;
+        padding-right:.7rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .header .navbar-nav .nav-link {
+        padding-left:1.2rem;
+        padding-right:1.2rem;
+    }
+}
+
+.header .navbar .navbar-nav > li > .dropdown-menu {
+    margin-top:-10px;
+    box-shadow:0 4px 8px rgba(0,0,0,.1);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius:15px;
+}
+
+.header .navbar .dropdown-menu .dropdown-item:focus, .header .navbar .dropdown-menu .dropdown-item {
+    line-height:1;
+    color: #2f2f2c;
+}
+
+.header .navbar .dropdown-menu .dropdown-item:focus, .header .navbar .dropdown-menu .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.header .action-button, .header .action-button:not(.disabled):active {
+    border:1px solid rgba(255,255,255,0.7);
+    border-radius:40px;
+    color: #ebeff1;
+    box-shadow:none;
+    text-shadow:none;
+    padding:.3rem .8rem;
+    background:transparent;
+    transition:background-color 0.20s;
+    outline:none;
+}
+
+.header .action-button:hover {
+    color: #2f2f2c;
+}
+
+.header .navbar .form-inline label {
+    color: #ffffff;
+}
+
+.header .navbar .form-inline .search-field {
+    display:inline-block;
+    width:80%;
+    background:none;
+    border:none;
+    border-bottom:1px solid transparent;
+    border-radius:0;
+    color: rgba(10, 10, 10, 0.7);
+    box-shadow:none;
+    color:inherit;
+    transition:border-bottom-color 0.3s;
+}
+
+.header .navbar .form-inline .search-field:focus {
+    border-bottom:1px solid rgba(255, 255, 255, 0.7);
+}
+
+.carousel-item{
+    margin-top: 50px;
+    height: 25rem;
+    background: #685d5d;
+    color: #ffffff;
+    position: relative;
+}
+
+.carousel-indicators {
+    margin: 0px;
+    height: 0px;
+}
+
+.carousel-indicators ol {
+    width: 100%;
+}
+
+.container{
+    position: absolute;
+    button:0;
+    left:0;
+    right:0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container-cards{
+    text-align: left;
+    margin: 0px;
+    position: center;
+    padding: 50px;
+}
+.card-body{
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: left;
+    height: 100px;
+    width: 200px;
+}
+.inner{
+    overflow:hidden;
+}
+.inner img {
+    transition: all 1.5s ease;
+}
+.inner:hover img{
+    transform: scale(1.5);
+}
+
+.overlay-image{
+    position: absolute;
+    button:0;
+    left:0;
+    right:0;
+    top:0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.information{
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+}
+
+.footerrow{
+    background:linear-gradient(135deg, #c23970, #ea7538);
+    font-family: 'Signika', sans-serif;
+}
+
+.bg-footer {
+    margin-top: 65px;
+}
+.logo-footer {
+    margin-bottom: 35px;
+}
+
+footer {
+    color: #f0f0f0;
+}
+footer p, a {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+footer h6 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 12%;
+    height: 1px;
+    left: 0;
+    bottom: -10px;
+}
+
+.btn-footer, btn-footer:not(.disabled):active {
+
+    border:1px solid rgba(255,255,255,0.7);
+    border-radius:40px;
+    color: #ebeff1;
+    box-shadow:none;
+    text-shadow:none;
+    padding: 7px 30px;
+    background:transparent;
+    transition:background-color 0.20s;
+    outline:none;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 47px;
+}
+.btn-footer:hover {
+    color: #2f2f2c;
+    text-decoration: none;
+}
+.form-footer input[type="text"] {
+    border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+
+}
+::placeholder {
+    font-size: 12px;
+    padding-left: 10px;
+    font-style: italic;
+}
+.form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+    margin-left: -5px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 10px;
+}
+.social .fa {
+    box-shadow:0 4px 8px rgba(0,0,0,.1);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 10px 10px;
+}
+footer ul li {
+    list-style: none;
+    display: block;
+}
+footer ul  {
+    padding-left: 0;
+}
+footer ul  li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.logo-part {
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+    height: 100%;
+}

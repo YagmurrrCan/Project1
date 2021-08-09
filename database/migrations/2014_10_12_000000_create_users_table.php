@@ -21,9 +21,17 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('permission');
         });
     }
 
+  /*  public function in_array()
+    {
+        $yetki = [ROLE_USER, ROLE_SUPERADMIN, ROLE_ADMIN];
+        in_array() = (ROLE_DELETE, ROLE_USER, $yetki);
+    $yetki = e.json;
+    }
+*/
     /**
      * Reverse the migrations.
      *
