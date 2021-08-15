@@ -15,7 +15,7 @@
 
 <footer class="container-fluid bg-footer py-5">
     <div class="container2">
-        <div class="footerrow">
+        <div class="row">
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-6 ">
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="footerrow">
+                <div class="row">
                     <div class="col-md-6 px-4">
                         <h6> Help us</h6>
                         <div class="row ">

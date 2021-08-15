@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\admin\indexController;
+use App\Http\Controllers\admin\kullanici;
+use App\Http\Controllers\front\PagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +16,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.welcome');
-})->name("home");
+Auth::routes();
 
-Route::get('/about', function () {
-    return view('about');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::group(["namespace"=>"admin_css", "prefix"=>"admin_css", "as"=>"admin_css."],function(){
+    Route::get("/", [indexController::class,"index"])->name("index");
+
+    Route::group(["namespace"=>"yayinevi", "prefix"=>"yayinevi", "as"=>"yayinevi."], function(){
+        Route::get('/', [indexController::class, "index"])->name("index");
+
+    });
+
+    Route::group(["namespace"=>"kullanici", "prefix"=>"kullanici"], function(){
+        Route::get("/ekle", [indexController::class, "ekle"]);
+
+    });
+
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::group(["namespace"=>"front", "prefix"=>"/"], function(){
+    Route::get("/", [PagesController::class, "home"]);
+
+    Route::get('/about', function () {
+        return view('about');
+    });
+
+    Route::get('/contact', function () {
+        return view('contact');
+    });
 });
+
+
+
