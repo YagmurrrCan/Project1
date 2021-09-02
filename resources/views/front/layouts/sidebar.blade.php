@@ -7,45 +7,51 @@
     <div class="sidebar-wrapper">
         <ul class="nav">
             <li class="active">
-                <a href="dashboard.html">
+                <a href="{{route("admin.index")}}">
                     <i class="material-icons">dashboard</i>
                     <p>Dashboard</p>
                 </a>
             </li>
             <li>
-                <a href="./user.html">
+                <a href="{{route("admin.yayinevi.index")}}">
                     <i class="material-icons">person</i>
-                    <p>User Profile</p>
+                    <p>Yayınevi</p>
                 </a>
             </li>
             <li>
-                <a href="./table.html">
+                <a href="{{route("admin.yazar.index")}}">
                     <i class="material-icons">content_paste</i>
-                    <p>Table List</p>
+                    <p>Yazarlar</p>
                 </a>
             </li>
             <li>
-                <a href="./typography.html">
+                <a href="{{route("admin.kategori.index")}}">
                     <i class="material-icons">library_books</i>
-                    <p>Typography</p>
+                    <p>Kategoriler</p>
                 </a>
             </li>
             <li>
-                <a href="./icons.html">
+                <a href="{{route("admin.kitap.index")}}">
                     <i class="material-icons">bubble_chart</i>
-                    <p>Icons</p>
+                    <p>Kitaplar</p>
                 </a>
             </li>
             <li>
-                <a href="./maps.html">
+                <a href="{{route("admin.kalem.index")}}">
                     <i class="material-icons">location_on</i>
-                    <p>Maps</p>
+                    <p>Kalemler</p>
                 </a>
             </li>
             <li>
-                <a href="./notifications.html">
+                <a href="{{route("admin.marka.index")}}">
                     <i class="material-icons text-gray">notifications</i>
-                    <p>Notifications</p>
+                    <p>Markalar</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{route("admin.slider.index")}}">
+                    <i class="material-icons text-gray">notifications</i>
+                    <p>Slider</p>
                 </a>
             </li>
             <li class="active-pro">

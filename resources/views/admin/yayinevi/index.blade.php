@@ -1,9 +1,10 @@
-@extends("layouts.admin")
+@extends("front.layouts.admin")
 @section("content")
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                    <a href="{{route("admin.yayinevi.create")}}" class="btn btn-success">Yeni yayınevi ekle</a>
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
                             <h4 class="title">Yayınevleri</h4>
@@ -19,14 +20,17 @@
                                 </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($data as $key=>$value)
                                 <tr>
-                                    <td>Dakota Rice</td>
-                                    <td>Niger</td>
-                                    <td class="text-primary">$36,738</td>
+                                    <td>{{$value["name"]}}</td>
+                                    <td><a href="{{route("admin.yayinevi.edit", ["id"=>$value["id"]])}}">Düzenle</a></td>
+                                    <td><a href="{{route("admin.yayinevi.delete", ["id"=>$value["id"]])}}">Sil</a></td>
                                 </tr>
+                                @endforeach
 
                                 </tbody>
                             </table>
+                            {{$data->links()}}
                         </div>
                     </div>
                 </div>

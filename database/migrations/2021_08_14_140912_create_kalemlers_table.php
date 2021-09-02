@@ -15,7 +15,15 @@ class CreateKalemlersTable extends Migration
     {
         Schema::create('kalemlers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('selflink');
+            $table->integer('markaid');
+            $table->double('fiyat');
+            $table->string('image');
+            $table->text("aciklama")->nullable();
             $table->timestamps();
+
+            $table->foreign('markaid')->references('id')->on('kalemlers')->onDelete('cascade');
         });
     }
 

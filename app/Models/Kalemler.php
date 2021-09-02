@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Kalemler extends Model
 {
     use HasFactory;
+
+
 }

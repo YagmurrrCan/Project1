@@ -15,13 +15,20 @@ class CreateKitaplarsTable extends Migration
     {
         Schema::create('kitaplars', function (Blueprint $table) {
             $table->id();
-            $table->string('kitapname');
-            $table->string('kitaptürü');
-            $table->string('yazarid');
+            $table->string('name');
+            $table->string('selflink');
+            $table->integer('yazarid');
+            $table->integer('yayineviid');
             $table->double('fiyat');
             $table->string('image');
-            $table->text("info")->nullable();
+            $table->text("aciklama")->nullable();
+            $table->integer('kategoriid');
             $table->timestamps();
+
+            $table->foreign('yazarid')->references('id')->on('kitaplars')->onDelete('cascade');
+            $table->foreign('yayineviid')->references('id')->on('kitaplars')->onDelete('cascade');
+            $table->foreign('kategoriid')->references('id')->on('kitaplars')->onDelete('cascade');
+
         });
     }
 

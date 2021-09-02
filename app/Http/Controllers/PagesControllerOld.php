@@ -28,3 +28,4 @@ Route::group(["namespace"=>"front"], function(){
         return view('front.welcome');
     })->name("home");
 });
+

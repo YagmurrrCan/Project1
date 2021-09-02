@@ -1,90 +1,35 @@
-@extends("layouts.admin")
+@extends("front.layouts.admin")
 @section("content")
     <div class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+
+                    @if(session("status"))
+                        <div class="alert alert-primary" role="alert">
+                            {{session("status")}}
+                        </div>
+                        @endif
+
+
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Edit Profile</h4>
-                            <p class="category">Complete your profile</p>
+                            <h4 class="title">Yayınevi Ekle</h4>
+                            <p class="category">Yayınevi Oluşturunuz</p>
                         </div>
                         <div class="card-content">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Company (disabled)</label>
-                                            <input type="text" class="form-control" disabled="">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Username</label>
-                                            <input type="text" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Email address</label>
-                                            <input type="email" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Fist Name</label>
-                                            <input type="text" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Last Name</label>
-                                            <input type="text" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                </div>
+                            <form action="{{route("admin.yayinevi.create.post")}}" method="POST">
+                                {{csrf_field()}}
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Adress</label>
-                                            <input type="text" class="form-control">
+                                            <label class="control-label">Yayınevi Adı</label>
+                                            <input type="text" name="name" class="form-control">
                                             <span class="material-input"></span></div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">City</label>
-                                            <input type="text" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Country</label>
-                                            <input type="text" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group label-floating is-empty">
-                                            <label class="control-label">Postal Code</label>
-                                            <input type="text" class="form-control">
-                                            <span class="material-input"></span></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label>About Me</label>
-                                            <div class="form-group label-floating is-empty">
-                                                <label class="control-label"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
-                                                <textarea class="form-control" rows="5"></textarea>
-                                                <span class="material-input"></span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+
+                                <button type="submit" class="btn btn-primary pull-right">Yayınevi Ekle</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
