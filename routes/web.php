@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\kitap;
 use App\Http\Controllers\admin\kategori;
 use App\Http\Controllers\admin\slider;
 use App\Http\Controllers\admin\marka;
+use App\Http\Controllers\admin\order;
 use App\Http\Controllers\front;
 use App\Http\Controllers\admin\kalem;
 use App\Http\Controllers\admin\indexController;
@@ -26,7 +27,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(["namespace"=>"admin", "prefix"=>"admin", "as"=>"admin."],function(){
+Route::group(["namespace"=>"admin", "prefix"=>"admin", "as"=>"admin.","middleware"=>["auth", "AdminControl"]],function(){
     Route::get("/", [indexController::class,"index"])->name("index");
 
     Route::group(["namespace"=>"yayinevi", "prefix"=>"yayinevi", "as"=>"yayinevi."], function(){
@@ -63,6 +64,9 @@ Route::group(["namespace"=>"admin", "prefix"=>"admin", "as"=>"admin."],function(
         Route::get("/düzenle/{id}", [kategori\indexController::class, "edit"])->name("edit");
         Route::post("/düzenle/{id}", [kategori\indexController::class, "update"])->name("edit.post");
         Route::get("/sil/{id}", [kategori\indexController::class, "delete"])->name("delete");
+
+        Route::get('/categories', [kategori\CategoryController::class, "index"])->name("index");
+        Route::get('/categories/{categories}',  [kategori\CategoryController::class, "categories"])->name("categories");
     });
 
     Route::group(["namespace"=>"kalem", "prefix"=>"kalem", "as"=>"kalem."], function(){
@@ -92,6 +96,14 @@ Route::group(["namespace"=>"admin", "prefix"=>"admin", "as"=>"admin."],function(
         Route::get("/sil/{id}", [slider\indexController::class, "delete"])->name("delete");
     });
 
+    Route::group(["namespace"=>"order", "prefix"=>"order", "as"=>"order."], function(){
+        Route::get('/', [order\indexController::class, "index"])->name("index");
+        Route::get("/ekle", [order\indexController::class, "create"])->name("create");
+        Route::post("/ekle", [order\indexController::class, "store"])->name("create.post");
+        Route::get("/detail/{id}", [order\indexController::class, "detail"])->name("detail");
+        Route::get("/sil/{id}", [order\indexController::class, "delete"])->name("delete");
+    });
+
 });
 
 Route::group(["namespace"=>"front", "prefix"=>"/"], function(){
@@ -102,11 +114,19 @@ Route::get("/kitap/kitapdetay/{selflink}", [front\kitap\indexController::class, 
 
 Route::get("/kalem/kalemdetay/{selflink}", [front\kalem\indexController::class, "index"])->name("kalem.detay");
 
-Route::get("/eklenen/add/{id}", [front\eklenen\indexController::class, "add"])->name("eklenen.add");
+Route::get("/search", [front\search\indexController::class, "index"])->name("search");
+Route::get("/kategori/{selflink}", [front\cat\indexController::class, "index"])->name("cat");
+
+Route::get("/eklenen/add/{selflink}", [front\eklenen\indexController::class, "add"])->name("eklenen.add");
 Route::get("/eklenen", [front\eklenen\indexController::class, "index"])->name("eklenen.index");
-Route::get("/eklenen/remove/{id}", [front\eklenen\indexController::class, "remove"])->name("eklenen.remove");
+Route::get("/eklenen/remove/{selflink}", [front\eklenen\indexController::class, "remove"])->name("eklenen.remove");
+Route::get("/eklenen/flush", [front\eklenen\indexController::class, "flush"])->name("eklenen.flush");
+Route::get("/eklenen/complete", [front\eklenen\indexController::class, "complete"])->name("eklenen.complete");
+Route::post("/eklenen/complete", [front\eklenen\indexController::class, "completeStore"])->name("eklenen.completeStore")->middleware(["auth"]);
 
 
 Route::post("/logout", [\App\Http\Controllers\Auth\LoginController::class, "logout"])->name("logout");
 Route::post("/user/login", [\App\Http\Controllers\Auth\LoginController::class, "userLogin"])->name("userLogin");
+
+
 

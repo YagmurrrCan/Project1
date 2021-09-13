@@ -54,6 +54,14 @@
                     <p>Slider</p>
                 </a>
             </li>
+
+            <li>
+                <a href="{{route("admin.order.index")}}">
+                    <i class="material-icons text-gray">notifications</i>
+                    <p>Siparişler</p>
+                </a>
+            </li>
+
             <li class="active-pro">
                 <a href="upgrade.html">
                     <i class="material-icons">unarchive</i>

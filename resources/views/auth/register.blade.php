@@ -27,16 +27,14 @@
 
             <div class="register-main">
                 <div class="col-md-6 account-left">
-                    <input class="@error('name') is-invalid @enderror" name="name" value="{{ old('name')}}" placeholder="Adınız" type="text" tabindex="1" required>
-
+                    <input class= "name" value="{{ old('name')}}" placeholder="Adınız" type="text" tabindex="1" required>
                     @error('name')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                     @enderror
 
-                    <input class="@error('email') is-invalid @enderror" name="email" value="{{ old('email')}}" placeholder="Email Adresiniz" type="text" tabindex="3" required>
-
+                    <input class="email" value="{{ old('email')}}" placeholder="Email Adresiniz" type="text" tabindex="3" required>
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -45,8 +43,7 @@
 
                 </div>
                 <div class="col-md-6 account-left">
-                    <input class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Şifreniz" type="password" tabindex="4" required>
-
+                    <input class= "password" required autocomplete="new-password" placeholder="Şifreniz" type="password" tabindex="4" required>
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

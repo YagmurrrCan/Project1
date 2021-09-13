@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Session;
 
 class sepetHelper
 {
-    static function add($id, $fiyat, $image, $name){
+    static function add($selflink, $fiyat, $image, $name){
         $sepet = Session::get("eklenen");
 
         $array = [
-            "id" => $id,
+            "selflink" => $selflink,
             "image" => $image,
             "name" => $name,
             "fiyat" => $fiyat
@@ -23,9 +23,9 @@ class sepetHelper
         return $x;
     }
 
-    static function remove($id){
+    static function remove($selflink){
             $s = Session::get("eklenen");
-            Session::forget("eklenen." .$id);
+            Session::forget("eklenen." .$selflink);
         }
 
     static function countData(){

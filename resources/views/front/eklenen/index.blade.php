@@ -33,7 +33,7 @@
                         </ul>
                         @foreach(\App\Helper\sepetHelper::allList() as $key => $value)
                         <ul class="cart-header">
-                            <a href="{{route("eklenen.remove", ["id"=>$key])}}"> <div class="close1"> </div> </a>
+                            <a href="{{route("eklenen.remove", ["selflink"=>$key])}}"> <div class="close1"> </div> </a>
                             <li class="ring-in"><img style="width:100px;height:100px;" src="{{$value["image"]}}" class="img-responsive" alt=""></li>
                             <li><span class="name">{{$value["name"]}}</span></li>
                             <li><span class="cost">{{$value["fiyat"]}} TL</span></li>
@@ -42,7 +42,10 @@
                         @endforeach
                     </div>
                 </div>
+
             </div>
+
+            <a href="{{route("eklenen.complete")}}"> Alışverişi Tamamla</a>
         </div>
     </div>
     <!--end-ckeckout-->

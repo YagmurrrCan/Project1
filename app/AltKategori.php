@@ -13,4 +13,10 @@ class AltKategori extends Model
         return $this->hasMany(AltKategori::class);
     }
 
+    public function childrenCategories()
+    {
+        return $this->hasMany(AltKategori::class)->with('altkategori');
+    }
+
+
 }

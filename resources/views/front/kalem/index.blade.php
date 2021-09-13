@@ -69,7 +69,7 @@
                                     <li><span>Marka</span>
                                         <span class="women1">: {{\App\Markalar::getField($data[0]["markaid"], "name")}}</span></li>
                                 </ul>
-                                <a href="{{route("eklenen.add", ["id"=>$data[0]["id"]])}}" class="add-cart item_add">SEPETE EKLE</a>
+                                <a href="{{route("eklenen.add", ["selflink"=>$data[0]["selflink"]])}}" class="add-cart item_add">SEPETE EKLE</a>
 
                             </div>
                         </div>
@@ -77,20 +77,18 @@
                     </div>
                     <div class="latestproducts">
                         <div class="product-one">
-                            <div class="col-md-4 product-left p-left">
-                                <div class="product-main simpleCart_shelfItem">
-                                    <a href="single.html" class="mask"><img class="img-responsive zoom-img" src="images/p-1.png" alt="" /></a>
-                                    <div class="product-bottom">
-                                        <h3>Smart Watches</h3>
-                                        <p>Explore Now</p>
-                                        <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-                                    </div>
-                                    <div class="srch">
-                                        <span>-50%</span>
+                            @foreach(\App\Kalemler::inRandomOrder()->limit(3)->get() as $key => $value)
+                                <div class="col-md-4 product-left p-left">
+                                    <div class="product-main simpleCart_shelfItem">
+                                        <a href="{{route("kitap.detay", ["selflink"=>$value["selflink"]])}}" class="mask"><img class="img-responsive zoom-img" style="width: 200px; height: 200px;" src="{{asset(\App\Helper\mHelper::largeImage($value["image"]))}}" alt="" /></a>
+                                        <div class="product-bottom">
+                                            <h3>{{$value["name"]}}</h3>
+                                            <p>{{\App\Markalar::getField($value["markaid"],"name")}}</p>
+                                            <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">{{$value["fiyat"]}} TL </span></h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
+                            @endforeach
                             <div class="clearfix"></div>
                         </div>
                     </div>
