@@ -1,6 +1,14 @@
 @extends("front.layouts.app")
 @section("content")
 
+    <div class="col-md-12">
+        <div class="container">
+            <div class="totalProducts">
+                (Bu kategorideki tüm ürünler {{$datakitap->total()}} tane)
+            </div>
+        </div>
+    </div>
+
     <div class="product">
         <div class="container">
             <div class="product-top">
@@ -23,9 +31,14 @@
                         <div class="clearfix"></div>
                     </div>
                 @endforeach
-                {{$datakitap->links()}}
 
-
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="navigation">
+                                {{$datakitap->links()}}
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

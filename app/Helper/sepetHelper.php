@@ -20,6 +20,9 @@ class sepetHelper
 
     static function allList(){
         $x = Session::get("eklenen");
+        if (!$x){
+            $x = [];
+        }
         return $x;
     }
 
@@ -29,7 +32,7 @@ class sepetHelper
         }
 
     static function countData(){
-        return count(Session::get("eklenen"));
+        return (is_array(Session::get('eklenen'))) ? count(Session::get('eklenen')) : 0;
     }
 
     static function totalPrice(){

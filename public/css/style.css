@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
 	background:#fff;
-	font-family: 'Lato-Regular';
+	font-family: 'Lato', sans-serif;
 }
 body a{
 	transition: 0.5s all;
@@ -14,6 +14,7 @@ body a{
 	-o-transition: 0.5s all;
 	-moz-transition: 0.5s all;
 	-ms-transition: 0.5s all;
+
 }
 @font-face {
     font-family: 'Lora-Regular';
@@ -34,14 +35,14 @@ body a{
 /*--starts-logo--*/
 .logo {
     text-align: center;
-    padding: 25px 0 20px 0px;
+    padding: 25px 0 20px 0;
     border-bottom: 1px solid #DEDEDE;
 }
 .logo a h1 {
     font-size: 64px;
     color: #000000;
     margin: 0;
-    font-family: 'Lora-Regular';
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
 	display: inline-block;
 }
@@ -52,7 +53,7 @@ body a{
 /*--starts-top-header--*/
 .top-header {
     background:linear-gradient(135deg, #c23970, #ea7538);
-    padding: 30px 0px;
+    padding: 30px 0;
 }
 .search-bar input[type="text"] {
 	width: 100%;
@@ -67,7 +68,7 @@ body a{
 	position: relative;
 }
 .search-bar input[type="submit"] {
-    background: url(../images/search.png)no-repeat 0px 0px;
+    background: url(../images/search.png)no-repeat 0 0;
     outline: none;
     -webkit-appearance: none;
     border: 0;
@@ -135,7 +136,7 @@ span.simpleCart_total {
     font-size: 13px;
 }
 .box_1 p {
-	margin: 0px 0 0px 8px;
+	margin: 0 0 0 8px;
 }
 .total {
 	display: inline-block;
@@ -151,8 +152,8 @@ span.simpleCart_total {
 /*----*/
 .box {
     float: left;
-    width: 11%;
-    margin-right: 10%;
+    width: 15%;
+    margin-right: 15%;
 }
 .box1{
 	float:left;
@@ -174,7 +175,7 @@ span.simpleCart_total {
 	font-size: 0.8125em;
 }
 .cssmenu li> a:hover {
-	color: #ACEAFA;
+	color: #ea7538;
 	text-decoration:none;
 }
 /* PREFIXED CSS */
@@ -307,7 +308,7 @@ span.simpleCart_total {
 	width: 90px;
 }
 .dropdown:hover div{
-	background:#4CB1CA;
+	background: #ea7538;
 }
 /* Height is adjusted by JS on open */
 .dropdown.open div{
@@ -470,7 +471,7 @@ span.simpleCart_total {
 	background:#000;
 }
 .callbacks_here a:after{
-	background:rgba(6, 107, 195, 0.85);
+	background: rgb(234, 117, 56);
 }
 ul.callbacks_tabs.callbacks2_tabs {
 	display: block;
@@ -579,7 +580,11 @@ figure.effect-bubba h4.gal {
 figure.effect-bubba p {
 	padding: 0px 3.5em;
 	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	-moz-transition: opacity 0.35s, -moz-transform 0.35s;
 	-o-transition: opacity 0.35s, -o-transform 0.35s;
 	-ms-transition: opacity 0.35s, -ms-transform 0.35s;
@@ -904,10 +909,10 @@ a.mask {
 	padding: 14px;
 }
 .w_nav2 li a.color1{
-	background:	#0AA5E2;
+	background: #ea7538;
 }
 .w_nav2 li a.color2{
-	background:	#40E0D0;
+	background: #ea7538;
 }
 .w_nav2 li a.color3{
 	background:	#B03060;
@@ -937,7 +942,7 @@ a.mask {
 	background:	#C0C0C0;
 }
 .w_nav2 li a.color12{
-	background:	#0AA5E2;
+	background: #ea7538;
 }
 .w_nav2 li a.color13{
 	background:	#FFCBDB;
@@ -1152,7 +1157,7 @@ a.mask {
 	-webkit-transition: border-color 0.3s;
 }
 .sky-form .toggle i:before {
-	background-color: #2da5da;
+	background-color: #ea7538;
 }
 /* hover state */
 .sky-form .input:hover input,
@@ -1260,7 +1265,7 @@ a.mask {
 	position: relative;
 }
 .jspDrag{
-	background: #2da5da;
+	background: #ea7538;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -3064,5 +3069,6 @@ ul.tag-men {
 .sky-form .radio, .sky-form .checkbox {
     font-size: 12px;
 }
+
 }
 /*--media-quaries-end-here--*/

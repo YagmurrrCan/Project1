@@ -8,6 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -43,16 +44,22 @@ class LoginController extends Controller
 
     public function userLogin(Request $request)
     {
-        $email = $request->email;
-        $password = $request->password;
-
-        $user = User::query()->where('email', $email)->first();
-
-        Auth::setUser($user);
-
-        return view('front.index', [
-            'user' => Auth::user()
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
+
+        $user = User::query()->where('email',  $credentials["email"])->first();
+
+        if (md5($credentials["password"]) !== $user->password){
+
+            return back()->withErrors([
+                'password' => ['The provided password does not match our records.']
+            ]);
+        }
+
+        Auth::login($user);
+        return redirect("/");
     }
 
     public function logout(Request $request)

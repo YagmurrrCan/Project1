@@ -157,11 +157,11 @@
 
 .slider.slider-info .noUi-connect,
 .slider.slider-info.noUi-connect {
-    background-color: #00bcd4;
+    background-color: #ea7538;
 }
 
 .slider.slider-info .noUi-handle {
-    border-color: #00bcd4;
+    border-color: #ea7538;
 }
 
 .slider.slider-success .noUi-connect,
@@ -636,7 +636,7 @@ h2.title {
 }
 
 .text-info {
-    color: #00bcd4;
+    color: #ea7538;
 }
 
 .text-rose {
@@ -878,7 +878,7 @@ h2.title {
 
 .sidebar[data-color="blue"] .nav li.active a,
 .off-canvas-sidebar[data-color="blue"] .nav li.active a {
-    background-color: #00bcd4;
+    background-color: #ea7538;
     box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 
@@ -1388,7 +1388,7 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-info.active {
 .navbar .navbar-nav>li>a.btn.btn-info.btn-simple:focus,
 .navbar .navbar-nav>li>a.btn.btn-info.btn-simple:active {
     background-color: transparent;
-    color: #00bcd4;
+    color: #ea7538;
 }
 
 .btn.btn-success,
@@ -1850,7 +1850,7 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 
 .btn.btn-facebook,
 .navbar .navbar-nav>li>a.btn.btn-facebook {
-    background-color: #3b5998;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(59, 89, 152, 0.14), 0 3px 1px -2px rgba(59, 89, 152, 0.2), 0 1px 5px 0 rgba(59, 89, 152, 0.12);
 }
@@ -1861,21 +1861,21 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 .navbar .navbar-nav>li>a.btn.btn-facebook:focus,
 .navbar .navbar-nav>li>a.btn.btn-facebook:active,
 .navbar .navbar-nav>li>a.btn.btn-facebook:hover {
-    background-color: #3b5998;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 14px 26px -12px rgba(59, 89, 152, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(59, 89, 152, 0.2);
 }
 
 .btn.btn-facebook.btn-simple,
 .navbar .navbar-nav>li>a.btn.btn-facebook.btn-simple {
-    color: #3b5998;
+    color: #ea7538;
     background-color: transparent;
     box-shadow: none;
 }
 
 .btn.btn-twitter,
 .navbar .navbar-nav>li>a.btn.btn-twitter {
-    background-color: #55acee;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(85, 172, 238, 0.14), 0 3px 1px -2px rgba(85, 172, 238, 0.2), 0 1px 5px 0 rgba(85, 172, 238, 0.12);
 }
@@ -1886,14 +1886,14 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 .navbar .navbar-nav>li>a.btn.btn-twitter:focus,
 .navbar .navbar-nav>li>a.btn.btn-twitter:active,
 .navbar .navbar-nav>li>a.btn.btn-twitter:hover {
-    background-color: #55acee;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 14px 26px -12px rgba(85, 172, 238, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(85, 172, 238, 0.2);
 }
 
 .btn.btn-twitter.btn-simple,
 .navbar .navbar-nav>li>a.btn.btn-twitter.btn-simple {
-    color: #55acee;
+    color: #ea7538;
     background-color: transparent;
     box-shadow: none;
 }
@@ -1950,7 +1950,7 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 
 .btn.btn-linkedin,
 .navbar .navbar-nav>li>a.btn.btn-linkedin {
-    background-color: #0976b4;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(9, 118, 180, 0.14), 0 3px 1px -2px rgba(9, 118, 180, 0.2), 0 1px 5px 0 rgba(9, 118, 180, 0.12);
 }
@@ -1961,14 +1961,14 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 .navbar .navbar-nav>li>a.btn.btn-linkedin:focus,
 .navbar .navbar-nav>li>a.btn.btn-linkedin:active,
 .navbar .navbar-nav>li>a.btn.btn-linkedin:hover {
-    background-color: #0976b4;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 14px 26px -12px rgba(9, 118, 180, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(9, 118, 180, 0.2);
 }
 
 .btn.btn-linkedin.btn-simple,
 .navbar .navbar-nav>li>a.btn.btn-linkedin.btn-simple {
-    color: #0976b4;
+    color: #ea7538;
     background-color: transparent;
     box-shadow: none;
 }
@@ -2050,7 +2050,7 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 
 .btn.btn-instagram,
 .navbar .navbar-nav>li>a.btn.btn-instagram {
-    background-color: #125688;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(18, 86, 136, 0.14), 0 3px 1px -2px rgba(18, 86, 136, 0.2), 0 1px 5px 0 rgba(18, 86, 136, 0.12);
 }
@@ -2061,14 +2061,14 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 .navbar .navbar-nav>li>a.btn.btn-instagram:focus,
 .navbar .navbar-nav>li>a.btn.btn-instagram:active,
 .navbar .navbar-nav>li>a.btn.btn-instagram:hover {
-    background-color: #125688;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 14px 26px -12px rgba(18, 86, 136, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(18, 86, 136, 0.2);
 }
 
 .btn.btn-instagram.btn-simple,
 .navbar .navbar-nav>li>a.btn.btn-instagram.btn-simple {
-    color: #125688;
+    color: #ea7538;
     background-color: transparent;
     box-shadow: none;
 }
@@ -2125,7 +2125,7 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 
 .btn.btn-behance,
 .navbar .navbar-nav>li>a.btn.btn-behance {
-    background-color: #1769ff;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(23, 105, 255, 0.14), 0 3px 1px -2px rgba(23, 105, 255, 0.2), 0 1px 5px 0 rgba(23, 105, 255, 0.12);
 }
@@ -2136,14 +2136,14 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 .navbar .navbar-nav>li>a.btn.btn-behance:focus,
 .navbar .navbar-nav>li>a.btn.btn-behance:active,
 .navbar .navbar-nav>li>a.btn.btn-behance:hover {
-    background-color: #1769ff;
+    background-color: #ea7538;
     color: #fff;
     box-shadow: 0 14px 26px -12px rgba(23, 105, 255, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(23, 105, 255, 0.2);
 }
 
 .btn.btn-behance.btn-simple,
 .navbar .navbar-nav>li>a.btn.btn-behance.btn-simple {
-    color: #1769ff;
+    color: #ea7538;
     background-color: transparent;
     box-shadow: none;
 }
@@ -2327,7 +2327,7 @@ fieldset[disabled] .navbar .navbar-nav>li>a.btn.btn-rose.active {
 
 .btn-group.open>.dropdown-toggle.btn.btn-info,
 .btn-group-vertical.open>.dropdown-toggle.btn.btn-info {
-    background-color: #00bcd4;
+    background-color: #ea7538;
 }
 
 .btn-group.open>.dropdown-toggle.btn.btn-warning,
@@ -2463,7 +2463,7 @@ a:focus {
 
 a.text-info:hover,
 a.text-info:focus {
-    color: #00a5bb;
+    color: #ea7538;
 }
 
 a .material-icons {
@@ -2741,7 +2741,7 @@ output {
 }
 
 .label.label-info {
-    background-color: #00bcd4;
+    background-color: #ea7538;
 }
 
 .label.label-warning {
@@ -2844,7 +2844,7 @@ fieldset[disabled] .form-group .form-control {
 }
 
 .form-group.is-focused.form-info .form-control {
-    background-image: linear-gradient(#00bcd4, #00bcd4), linear-gradient(#D2D2D2, #D2D2D2);
+    background-image: linear-gradient(#ea7538, #ea7538), linear-gradient(#D2D2D2, #D2D2D2);
 }
 
 .form-group.is-focused.form-success .form-control {
@@ -2921,7 +2921,7 @@ fieldset[disabled] .form-group .form-control {
 
 .form-group.has-info label.control-label,
 .form-group.has-info .help-block {
-    color: #00bcd4;
+    color: #ea7538;
 }
 
 .form-group textarea {
@@ -4003,8 +4003,8 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .pagination.pagination-info>.active>span,
 .pagination.pagination-info>.active>span:focus,
 .pagination.pagination-info>.active>span:hover {
-    background-color: #00bcd4;
-    border-color: #00bcd4;
+    background-color: #ea7538;
+    border-color: #ea7538;
     box-shadow: 0 4px 5px 0 rgba(0, 188, 212, 0.14), 0 1px 10px 0 rgba(0, 188, 212, 0.12), 0 2px 4px -1px rgba(0, 188, 212, 0.2);
 }
 
@@ -4093,7 +4093,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .nav-pills.nav-pills-info>li.active>a,
 .nav-pills.nav-pills-info>li.active>a:focus,
 .nav-pills.nav-pills-info>li.active>a:hover {
-    background-color: #00bcd4;
+    background-color: #ea7538;
     box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 
@@ -4659,12 +4659,12 @@ fieldset[disabled] .navbar .btn-link:focus {
 .navbar.navbar-info .dropdown-menu li>a:hover,
 .navbar.navbar-info .dropdown-menu li>a:focus {
     color: #FFFFFF;
-    background-color: #00bcd4;
+    background-color: #ea7538;
     box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 
 .navbar.navbar-info .dropdown-menu .active>a {
-    background-color: #00bcd4;
+    background-color: #ea7538;
     color: #ffffff;
     box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
@@ -4801,7 +4801,7 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 
 .navbar-inverse {
-    background-color: #3f51b5;
+    background-color: #ea7538;
 }
 
 .navbar.navbar-transparent {
@@ -5294,7 +5294,7 @@ footer .btn {
 }
 
 .card [data-background-color="blue"] {
-    background: linear-gradient(60deg, #26c6da, #00acc1);
+    background: linear-gradient(60deg, #ea7538, #ea7538);
     box-shadow: 0 12px 20px -10px rgba(0, 188, 212, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(0, 188, 212, 0.2);
 }
 
@@ -5489,61 +5489,61 @@ footer .btn {
 }
 
 .ct-label.ct-horizontal.ct-start {
-    -webkit-box-align: flex-end;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-end;
-    -ms-flex-align: flex-end;
+    -ms-flex-align: inherit;
     align-items: flex-end;
-    -webkit-box-pack: flex-start;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
+    -ms-flex-pack: inherit;
     justify-content: flex-start;
     text-align: left;
     text-anchor: start;
 }
 
 .ct-label.ct-horizontal.ct-end {
-    -webkit-box-align: flex-start;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-start;
-    -ms-flex-align: flex-start;
+    -ms-flex-align: inherit;
     align-items: flex-start;
-    -webkit-box-pack: flex-start;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
+    -ms-flex-pack: inherit;
     justify-content: flex-start;
     text-align: left;
     text-anchor: start;
 }
 
 .ct-label.ct-vertical.ct-start {
-    -webkit-box-align: flex-end;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-end;
-    -ms-flex-align: flex-end;
+    -ms-flex-align: inherit;
     align-items: flex-end;
-    -webkit-box-pack: flex-end;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-end;
-    -ms-flex-pack: flex-end;
+    -ms-flex-pack: inherit;
     justify-content: flex-end;
     text-align: right;
     text-anchor: end;
 }
 
 .ct-label.ct-vertical.ct-end {
-    -webkit-box-align: flex-end;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-end;
-    -ms-flex-align: flex-end;
+    -ms-flex-align: inherit;
     align-items: flex-end;
-    -webkit-box-pack: flex-start;
+    -webkit-box-pack:inherit;
     -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
+    -ms-flex-pack: inherit;
     justify-content: flex-start;
     text-align: left;
     text-anchor: start;
 }
 
 .ct-chart-bar .ct-label.ct-horizontal.ct-start {
-    -webkit-box-align: flex-end;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-end;
-    -ms-flex-align: flex-end;
+    -ms-flex-align: inherit;
     align-items: flex-end;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -5554,9 +5554,9 @@ footer .btn {
 }
 
 .ct-chart-bar .ct-label.ct-horizontal.ct-end {
-    -webkit-box-align: flex-start;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-start;
-    -ms-flex-align: flex-start;
+    -ms-flex-align: inherit;
     align-items: flex-start;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -5567,26 +5567,26 @@ footer .btn {
 }
 
 .ct-chart-bar.ct-horizontal-bars .ct-label.ct-horizontal.ct-start {
-    -webkit-box-align: flex-end;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-end;
-    -ms-flex-align: flex-end;
+    -ms-flex-align: inherit;
     align-items: flex-end;
-    -webkit-box-pack: flex-start;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
+    -ms-flex-pack: inherit;
     justify-content: flex-start;
     text-align: left;
     text-anchor: start;
 }
 
 .ct-chart-bar.ct-horizontal-bars .ct-label.ct-horizontal.ct-end {
-    -webkit-box-align: flex-start;
+    -webkit-box-align: inherit;
     -webkit-align-items: flex-start;
-    -ms-flex-align: flex-start;
+    -ms-flex-align: inherit;
     align-items: flex-start;
-    -webkit-box-pack: flex-start;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
+    -ms-flex-pack: inherit;
     justify-content: flex-start;
     text-align: left;
     text-anchor: start;
@@ -5597,9 +5597,9 @@ footer .btn {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: flex-end;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-end;
-    -ms-flex-pack: flex-end;
+    -ms-flex-pack: inherit;
     justify-content: flex-end;
     text-align: right;
     text-anchor: end;
@@ -5610,9 +5610,9 @@ footer .btn {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: flex-start;
+    -webkit-box-pack: inherit;
     -webkit-justify-content: flex-start;
-    -ms-flex-pack: flex-start;
+    -ms-flex-pack: inherit;
     justify-content: flex-start;
     text-align: left;
     text-anchor: end;
@@ -5653,12 +5653,12 @@ footer .btn {
 .ct-series-a .ct-line,
 .ct-series-a .ct-bar,
 .ct-series-a .ct-slice-donut {
-    stroke: #00bcd4;
+    stroke: #ea7538;
 }
 
 .ct-series-a .ct-slice-pie,
 .ct-series-a .ct-area {
-    fill: #00bcd4;
+    fill: #ea7538;
 }
 
 .ct-series-b .ct-point,
@@ -5773,12 +5773,12 @@ footer .btn {
 .ct-series-k .ct-line,
 .ct-series-k .ct-bar,
 .ct-series-k .ct-slice-donut {
-    stroke: #55acee;
+    stroke: #ea7538;
 }
 
 .ct-series-k .ct-slice-pie,
 .ct-series-k .ct-area {
-    fill: #55acee;
+    fill: #ea7538;
 }
 
 .ct-series-l .ct-point,
@@ -5797,7 +5797,7 @@ footer .btn {
 .ct-series-m .ct-line,
 .ct-series-m .ct-bar,
 .ct-series-m .ct-slice-donut {
-    stroke: #1769ff;
+    stroke: #ea7538;
 }
 
 .ct-series-m .ct-slice-pie,

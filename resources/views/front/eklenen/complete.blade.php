@@ -18,6 +18,9 @@
             <div class="contact-top heading">
                 <h2>Bilgileri Doldurunuz</h2>
             </div>
+            @if(session("status"))
+                {{session("status")}}
+            @endif
             <div class="contact-text">
                 <div class="col-md-12 contact-right">
                     <form action="{{route("eklenen.completeStore")}}" method="POST">

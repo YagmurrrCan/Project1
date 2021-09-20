@@ -16,6 +16,7 @@
                         <div class="card-header" data-background-color="purple">
                             <h4 class="title">Sipariş Detayı</h4>
                         </div>
+
                         <div class="card-content">
                                 <div class="row">
                                     <div class="col-md-12">

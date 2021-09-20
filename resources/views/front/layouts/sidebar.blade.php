@@ -62,12 +62,12 @@
                 </a>
             </li>
 
-            <li class="active-pro">
-                <a href="upgrade.html">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li>
+            //li class="active-pro">
+                //a href="upgrade.html">
+                    //i class="material-icons">unarchive
+                    //p>Upgrade to PRO
+                ///a>
+            ///li>
         </ul>
     </div>
 </div>

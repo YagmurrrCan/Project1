@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>K & K </title>
+
+    <title>K & K </title>
     <link href="{{asset("css/bootstrap.css")}}" rel="stylesheet" type="text/css" media="all" />
     <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
     <script src="{{asset("js/jquery-1.11.0.min.js")}}"></script>
@@ -29,14 +30,15 @@
         <div class="top-header-main">
             <div class="col-md-6 top-header-left">
                 <div class="drop">
-                    @if(isset($user))
+
+                    @if(\Illuminate\Support\Facades\Auth::check())
                         <div class="box">
-                            <a href="" style="color: white;">{{$user->name}}</a>
+                            <a href="" style="color: white;">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
                         </div>
                         <div class="box">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button type="submit">Logout</button>
+                                <button type="submit">{{trans("Çıkış Yap")}}</button>
                             </form>
                         </div>
                     @endif
@@ -44,9 +46,10 @@
                     @guest
                         <div class="box">
                             <select tabindex="4" class="dropdown">
-                                <option value="" class="label">English :</option>
-                                <option value="1">English</option>
-                                <option value="3">German</option>
+                                <option value="" class="label">Dil Seçimi:</option>
+                                <option value="1">TR</option>
+                                <option value="2">EN</option>
+                                <option value="3">DE</option>
                             </select>
                         </div>
                     <div class="box">
@@ -55,8 +58,8 @@
                     <div class="box">
                         <a href="{{url("/register")}}" style="color: white;">Kayıt Ol</a>
                     </div>
-
                     @endguest
+
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -91,10 +94,11 @@
                         <li class="active"><a href="{{route("index")}}">Anasayfa</a></li>
 
                         @foreach(\App\Kategoriler::all() as $key=>$value)
-                        <li class="grid"><a href="{{route("cat", ["selflink"=>$value["selflink"]])}}">{{$value["name"]}}</a></li>
-                        @endforeach
-                        <li class="grid"><a href="contact.html">Contact</a>
+                        <li class="grid">
+                            <a href="{{route("cat", ["selflink"=>$value["selflink"]])}}">{{$value["name"]}} ({{$value->totalProducts()}})</a>
                         </li>
+                        @endforeach
+
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
@@ -121,7 +125,7 @@
     <div class="container">
         <div class="infor-top">
             <div class="col-md-3 infor-left">
-                <h3>Follow Us</h3>
+                <h3>Bizi takip edebilirsiniz...</h3>
                 <ul>
                     <li><a href="#"><span class="fb"></span><h6>Facebook</h6></a></li>
                     <li><a href="#"><span class="twit"></span><h6>Twitter</h6></a></li>
@@ -129,32 +133,20 @@
                 </ul>
             </div>
             <div class="col-md-3 infor-left">
-                <h3>Information</h3>
+                <h3>Bilgiler</h3>
                 <ul>
-                    <li><a href="#"><p>Specials</p></a></li>
-                    <li><a href="#"><p>New Products</p></a></li>
-                    <li><a href="#"><p>Our Stores</p></a></li>
-                    <li><a href="contact.html"><p>Contact Us</p></a></li>
-                    <li><a href="#"><p>Top Sellers</p></a></li>
+                    <li><a href="#"><p>Mağazalarımız</p></a></li>
+                    <li><a href="#"><p>Çok Satanlar</p></a></li>
+                    <li><a href="#"><p>Yeni Ürünler</p></a></li>
                 </ul>
             </div>
+
             <div class="col-md-3 infor-left">
-                <h3>My Account</h3>
-                <ul>
-                    <li><a href="account.html"><p>My Account</p></a></li>
-                    <li><a href="#"><p>My Credit slips</p></a></li>
-                    <li><a href="#"><p>My Merchandise returns</p></a></li>
-                    <li><a href="#"><p>My Personal info</p></a></li>
-                    <li><a href="#"><p>My Addresses</p></a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 infor-left">
-                <h3>Store Information</h3>
-                <h4>The company name,
-                    <span>Lorem ipsum dolor,</span>
-                    Glasglow Dr 40 Fe 72.</h4>
-                <h5>+955 123 4567</h5>
-                <p><a href="mailto:example@email.com">contact@example.com</a></p>
+                <h3>İletişim Bilgiler</h3>
+                <h4>K & K , QR Code Uygulaması.</h4>
+                <p><a href="https://www.linkedin.com/in/canyagmurrr/">www.linkedin.com</a></p>
+                <p><a href="https://github.com/YagmurrrCan/Project1">github.com/YagmurrrCan</a></p>
+                <p><a href="mailto:example@email.com">yagmurrrcan16@gmail.com</a></p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -165,13 +157,7 @@
 <div class="footer">
     <div class="container">
         <div class="footer-top">
-            <div class="col-md-6 footer-left">
-                <form>
-                    <input type="text" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
-                    <input type="submit" value="Subscribe">
-                </form>
-            </div>
-            <div class="col-md-6 footer-right">
+            <div class="col-md-6 footer">
                 <p>© 2021 K & K. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
             </div>
             <div class="clearfix"></div>

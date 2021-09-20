@@ -65,8 +65,7 @@ Route::group(["namespace"=>"admin", "prefix"=>"admin", "as"=>"admin.","middlewar
         Route::post("/düzenle/{id}", [kategori\indexController::class, "update"])->name("edit.post");
         Route::get("/sil/{id}", [kategori\indexController::class, "delete"])->name("delete");
 
-        Route::get('/categories', [kategori\CategoryController::class, "index"])->name("index");
-        Route::get('/categories/{categories}',  [kategori\CategoryController::class, "categories"])->name("categories");
+        Route::get('/kategorilers', [kategori\indexController::class, "kategorilers"])->name("kategorilers");
     });
 
     Route::group(["namespace"=>"kalem", "prefix"=>"kalem", "as"=>"kalem."], function(){
@@ -121,7 +120,7 @@ Route::get("/eklenen/add/{selflink}", [front\eklenen\indexController::class, "ad
 Route::get("/eklenen", [front\eklenen\indexController::class, "index"])->name("eklenen.index");
 Route::get("/eklenen/remove/{selflink}", [front\eklenen\indexController::class, "remove"])->name("eklenen.remove");
 Route::get("/eklenen/flush", [front\eklenen\indexController::class, "flush"])->name("eklenen.flush");
-Route::get("/eklenen/complete", [front\eklenen\indexController::class, "complete"])->name("eklenen.complete");
+Route::get("/eklenen/complete", [front\eklenen\indexController::class, "complete"])->name("eklenen.complete")->middleware(["auth"]);
 Route::post("/eklenen/complete", [front\eklenen\indexController::class, "completeStore"])->name("eklenen.completeStore")->middleware(["auth"]);
 
 

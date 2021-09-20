@@ -19,5 +19,19 @@ class Kategoriler extends Model
             return "Silinmiş kategoriler!";
         }
     }
+    public function totalProducts(){
+
+        return Kitaplar::where("kategoriid", $this->id)->count();
+    }
+
+    public function kategorilers()
+    {
+        return $this->hasOne(Kategoriler::class);
+    }
+
+    public function childrenCategories()
+    {
+        return $this->hasMany(Kategoriler::class)->with('kategorilers');
+    }
 
 }

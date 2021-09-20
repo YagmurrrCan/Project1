@@ -41,33 +41,17 @@
     <div class="about">
         <div class="container">
             <div class="about-top grid-1">
-                <div class="col-md-4 about-left">
+                @foreach(\App\Kitaplar::inRandomOrder()->limit(3)->get() as $key => $value)
+                <div class= "col-md-4 about-left">
                     <figure class="effect-bubba">
-                        <img class="img-responsive" src="images/abt-1.jpg" alt=""/>
+                        <img class="img-responsive" src="{{asset($value["image"])}}" alt=""/>
                         <figcaption>
-                            <h2>En çok satan 50 eser!</h2>
-                            <p>En çok satan 50 eser!</p>
+                            <h4>{{$value["name"]}}</h4>
+                            <p>{{$value["aciklama"]}}</p>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="col-md-4 about-left">
-                    <figure class="effect-bubba">
-                        <img class="img-responsive" src="images/abt-2.jpg" alt=""/>
-                        <figcaption>
-                            <h4>Mauris erat augue</h4>
-                            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-4 about-left">
-                    <figure class="effect-bubba">
-                        <img class="img-responsive" src="images/abt-3.jpg" alt=""/>
-                        <figcaption>
-                            <h4>Cras elit mauris</h4>
-                            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-                        </figcaption>
-                    </figure>
-                </div>
+                @endforeach
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -78,7 +62,7 @@
     <div class="product">
         <div class="container">
             <div class="product-top">
-                @foreach(\App\Kitaplar::all()->chunk(4) as $chunk)
+                @foreach($datakitap ->chunk(4) as $chunk)
                 <div class="product-one">
                     @foreach($chunk as $key=>$value)
                     <div class="col-md-3 product-left">
@@ -89,7 +73,7 @@
                                 <h3>{{$value["name"]}}</h3>
                                 <p>{{\App\Yazarlar::getField($value["yazarid"],"name")}}</p>
 
-                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">{{$value["fiyat"]}}</span></h4>
+                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">{{$value["fiyat"]}} TL</span></h4>
                             </div>
                         </div>
                     </div>
@@ -98,7 +82,8 @@
                 </div>
                 @endforeach
 
-                    @foreach(\App\Kalemler::all()->chunk(4) as $chunk)
+
+                    @foreach($datakalem->chunk(4) as $chunk)
                     <div class="product-one">
                         @foreach($chunk as $key=>$value)
                             <div class="col-md-3 product-left">
@@ -116,6 +101,8 @@
                         <div class="clearfix"></div>
                     </div>
                     @endforeach
+                    {{$datakitap->links()}}
+
             </div>
         </div>
     </div>
