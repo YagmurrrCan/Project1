@@ -17,9 +17,8 @@ class CreateKategorilersTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("selflink");
-            $table->string("parentID");
+            $table->unsignedBigInteger("parentID")->nullable();
             $table->timestamps();
-
 
             $table->foreign('parentID')->references('id')->on('kategorilers')->onDelete('cascade');
         });

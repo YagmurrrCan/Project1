@@ -80,13 +80,4 @@ class indexController extends Controller
         }
     }
 
-    public function kategorilers()
-    {
-        $kategorilers = Kategoriler::whereNull('parentID')
-            ->with('childrenCategories')
-            ->get();
-        return view('kategorilers', compact('kategorilers'));
-    }
-
-
 }

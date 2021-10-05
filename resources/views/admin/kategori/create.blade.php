@@ -11,7 +11,6 @@
                         </div>
                     @endif
 
-
                     <div class="card">
                         <div class="card-header" data-background-color="purple">
                             <h4 class="title">Kategori Ekle</h4>
@@ -25,7 +24,21 @@
                                         <div class="form-group label-floating is-empty">
                                             <label class="control-label">Kategori Adı</label>
                                             <input type="text" name="name" class="form-control">
-                                            <span class="material-input"></span></div>
+                                            <span class="material-input"></span>
+                                        </div>
+
+                                        <div>
+                                            <label class="control-label">Bağlı olduğu kategori:</label>
+                                            <select name="parentID">
+                                                <option>Lütfen bir kategori seçiniz</option>
+
+                                                    @foreach(\App\Kategoriler::all() as $kategori)
+                                                    <option value="{{$kategori["id"]}}">{{$kategori["name"]}}</option>
+
+                                                    @endforeach
+
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 

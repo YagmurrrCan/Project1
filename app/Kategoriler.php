@@ -24,14 +24,18 @@ class Kategoriler extends Model
         return Kitaplar::where("kategoriid", $this->id)->count();
     }
 
-    public function kategorilers()
+    public function parentCategories()
     {
-        return $this->hasOne(Kategoriler::class);
+        return $this->hasOne(Kategoriler::class, "parentId","kategoriid");
     }
 
     public function childrenCategories()
     {
-        return $this->hasMany(Kategoriler::class)->with('kategorilers');
+        return $this->hasMany(Kategoriler::class, "parentID", "id");
+    }
+
+    public static function getRootCategory() {
+       return Kategoriler::whereNull('parentID')->get();
     }
 
 }

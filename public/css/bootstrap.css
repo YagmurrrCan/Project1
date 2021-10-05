@@ -1103,6 +1103,8 @@ textarea {
 }
 a {
   color: #ea7538;
+  padding: inherit;
+  margin-right: auto;
   text-decoration: none;
 }
 a:hover,

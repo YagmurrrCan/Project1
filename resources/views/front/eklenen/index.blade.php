@@ -21,7 +21,7 @@
             </div>
             <div class="ckeckout-top">
                 <div class="cart-items">
-                    <h3>Sepetim {{\App\Helper\sepetHelper::countData()}}</h3>
+                    <h4> <i> Sepetinizde {{\App\Helper\sepetHelper::countData()}} adet ürün bulunmaktadır. </i> </h4>
 
                     <div class="in-check" >
                         <ul class="unit">

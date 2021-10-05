@@ -82,7 +82,6 @@
                 </div>
                 @endforeach
 
-
                     @foreach($datakalem->chunk(4) as $chunk)
                     <div class="product-one">
                         @foreach($chunk as $key=>$value)

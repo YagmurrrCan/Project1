@@ -17,6 +17,7 @@
                             <h4 class="title">Kategori Düzenle</h4>
                             <p class="category">{{$data[0]["name"]}}</p>
                         </div>
+
                         <div class="card-content">
                             <form action="{{route("admin.kategori.edit.post", ["id"=>$data[0]["id"]])}}" method="POST">
                                 {{csrf_field()}}
@@ -27,6 +28,19 @@
                                             <input type="text" value="{{$data[0]["name"]}}" name="name" class="form-control">
                                             <span class="material-input"></span></div>
                                     </div>
+                                </div>
+
+                                <div>
+                                    <label class="control-label">Bağlı olduğu kategori:</label>
+                                    <select name="parentID">
+                                        <option>Lütfen bir kategori seçiniz</option>
+
+                                        @foreach(\App\Kategoriler::all() as $kategori)
+                                            <option selected value="{{$kategori["id"]}}">{{$kategori["name"]}}</option>
+
+                                        @endforeach
+
+                                    </select>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary pull-right">Kategori Düzenle</button>

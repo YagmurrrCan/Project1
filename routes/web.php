@@ -65,7 +65,6 @@ Route::group(["namespace"=>"admin", "prefix"=>"admin", "as"=>"admin.","middlewar
         Route::post("/düzenle/{id}", [kategori\indexController::class, "update"])->name("edit.post");
         Route::get("/sil/{id}", [kategori\indexController::class, "delete"])->name("delete");
 
-        Route::get('/kategorilers', [kategori\indexController::class, "kategorilers"])->name("kategorilers");
     });
 
     Route::group(["namespace"=>"kalem", "prefix"=>"kalem", "as"=>"kalem."], function(){

@@ -38,7 +38,7 @@
                         <div class="box">
                             <form action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <button type="submit">{{trans("Çıkış Yap")}}</button>
+                                <button type="submit">Çıkış Yap</button>
                             </form>
                         </div>
                     @endif
@@ -91,12 +91,15 @@
             <div class="col-md-9 header-left">
                 <div class="top-nav">
                     <ul class="memenu skyblue">
-                        <li class="active"><a href="{{route("index")}}">Anasayfa</a></li>
+                        <li class="active"><a href="{{route("index")}}">Anasayfa </a></li>
 
-                        @foreach(\App\Kategoriler::all() as $key=>$value)
-                        <li class="grid">
-                            <a href="{{route("cat", ["selflink"=>$value["selflink"]])}}">{{$value["name"]}} ({{$value->totalProducts()}})</a>
-                        </li>
+                        @foreach(\App\Kategoriler::getRootCategory() as $key=>$value)
+                             
+                            <li class="grid">
+                                <a href="{{route("cat", ["selflink"=>$value["selflink"]])}}"> {{$value["name"]}} ({{$value->totalProducts()}}) </a>
+                                    @include("front.cat.root", $value)
+                            </li>
+
                         @endforeach
 
                     </ul>
