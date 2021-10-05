@@ -17,13 +17,13 @@ class CreateKalemlersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('selflink');
-            $table->integer('markaid');
+            $table->foreignId('markaid');
             $table->double('fiyat');
             $table->string('image');
             $table->text("aciklama")->nullable();
             $table->timestamps();
 
-            $table->foreign('markaid')->references('id')->on('kalemlers')->onDelete('cascade');
+            $table->foreign('markaid')->references('id')->on('markalars')->cascadeOnDelete();
         });
     }
 

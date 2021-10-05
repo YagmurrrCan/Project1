@@ -17,17 +17,17 @@ class CreateKitaplarsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('selflink');
-            $table->integer('yazarid');
-            $table->integer('yayineviid');
+            $table->foreignId('yazarid');
+            $table->foreignId('yayineviid');
             $table->double('fiyat');
             $table->string('image');
             $table->text("aciklama")->nullable();
-            $table->integer('kategoriid');
+            $table->foreignId('kategoriid');
             $table->timestamps();
 
-            $table->foreign('yazarid')->references('id')->on('kitaplars')->onDelete('cascade');
-            $table->foreign('yayineviid')->references('id')->on('kitaplars')->onDelete('cascade');
-            $table->foreign('kategoriid')->references('id')->on('kitaplars')->onDelete('cascade');
+            $table->foreign('yazarid')->references('id')->on('yazarlars')->onDelete('cascade');
+            $table->foreign('yayineviid')->references('id')->on('yayin_evis')->onDelete('cascade');
+            $table->foreign('kategoriid')->references('id')->on('kategorilers')->onDelete('cascade');
 
         });
     }

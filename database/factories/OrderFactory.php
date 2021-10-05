@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Order;
+use App\Order;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class OrderFactory extends Factory
@@ -22,7 +22,12 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'selflink' => $this->faker->slug(),
+            'adres' => $this->faker->address(),
+            'mesaj' => $this->faker->text(),
+            'telefon' => $this->faker->phoneNumber(),
+            'json' => json_decode("json"),
         ];
     }
 }

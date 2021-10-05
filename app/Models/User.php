@@ -54,4 +54,12 @@ class User extends Authenticatable
         }
 
     }
+
+    public function run()
+    {
+        User::factory()
+            ->count(50)
+            ->hasPosts(1)
+            ->create();
+    }
 }
